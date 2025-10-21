@@ -1,5 +1,3 @@
-
-import java.util.Scanner;
 import java.util.*;
 
 public class Main {
@@ -46,7 +44,6 @@ public class Main {
                     break;
                 }
                 country = input;
- //               System.out.println();
 
                 System.out.print("Введите город:");
                 input = scanner.nextLine();
@@ -54,7 +51,6 @@ public class Main {
                     break;
                 }
                 city = input;
-//                System.out.println();
 
                 System.out.print("Введите вес (кг):");
                 input = scanner.nextLine();
@@ -62,7 +58,6 @@ public class Main {
                     break;
                 }
                 weight = Double.parseDouble(input);
- //               System.out.println();
 
                 if (weight <= 0) {
                     System.out.println("Неправильно введен вес! (" + weight + ")");
@@ -78,8 +73,7 @@ public class Main {
                     uniqueCountries.add(country);
 
                     System.out.printf("Стоимость доставки составит: %.2f руб.\n", costDelivery);
-                } else
-                {
+                } else {
                     System.out.println("Доставки по этому адресу нет\n");
                     continue;
                 }
@@ -89,8 +83,10 @@ public class Main {
                 continue;
             }
         }
-        System.out.printf("Общая стоимость всех доставок: %.2f руб.\n",sumTotal);
+        System.out.printf("Общая стоимость всех доставок: %.2f руб.\n", sumTotal);
         System.out.printf("Количество уникальных стран доставки: %d%n", uniqueCountries.size());
-        System.out.println("Уникальные страны: " + String.join(", ", uniqueCountries));    }
+        System.out.println("Уникальные страны: " + String.join(", ", uniqueCountries));
+        scanner.close();
+    }
 }
 

@@ -1,4 +1,3 @@
-
 import java.util.Objects;
 
 class Address {
@@ -10,8 +9,7 @@ class Address {
         this.city = city;
     }
 
-    public String getCountry()
-    {
+    public String getCountry() {
         return this.country;
     }
 
@@ -20,7 +18,8 @@ class Address {
         Address address = (Address) obj;
         if (obj == null) {
             return false;
-        };
+        }
+
         return this.country.equals(address.country) && this.city.equals(address.city);
     }
 
